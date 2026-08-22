@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Dancing+Script:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-body: "Cormorant Garamond", serif;
+  --font-handwriting: "Dancing Script", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: #0a0410;
+  color: #f5e8ef;
+  overflow-x: hidden;
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0410;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ff6b9d, #c084fc);
+  border-radius: 999px;
+}
+
+::selection {
+  background: rgba(255, 107, 157, 0.3);
+  color: #fff;
+}
+
+.gradient-text-rose {
+  background: linear-gradient(135deg, #ff6b9d, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
